@@ -11,8 +11,18 @@ inner_cols = ["qty", "unt", "item"]
 inner_algn = " c c l "
 
 
-def open_document(fp):
+def begin_document(fp):
+    """Begin LaTeX document.
 
+    Parameters
+    ----------
+    fp : _io.TextIOWrapper
+        File pointer
+
+    Returns
+    -------
+    None
+    """
     fp.write(r"\documentclass{article}" + "\n")
     fp.write(r"\usepackage{array}" + "\n")
     fp.write(r"\usepackage{geometry}" + "\n")
@@ -20,22 +30,69 @@ def open_document(fp):
     fp.write(r"\begin{document}" + "\n")
 
 
-def close_document(fp):
+def end_document(fp):
+    """End LaTeX document.
 
+    Parameters
+    ----------
+    fp : _io.TextIOWrapper
+        File pointer
+
+    Returns
+    -------
+    None
+    """
     fp.write(r"\end{document}" + "\n")
 
 
 def escape_specials(values):
+    """Escape LaTeX special characters.
+
+    Parameters
+    ----------
+    values : str or list(str)
+        The values containing special characters to escape
+
+    Returns
+    -------
+    str or list(str)
+        The values containing escaped special characters
+    """
     if len(values) == 1:
         return str(values[0]).replace("%", r"\%").replace("&", r"\&")
     else:
         return [str(value).replace("%", r"\%").replace("&", r"\&") for value in values]
 
 
-def print_outer_cell(fp, group, n_inner_rows, name=None, print_rule=False):
+def write_outer_cell(fp, group, n_inner_rows, name=None, write_rule=False):
+    """Write the specified number of rows from the group to create the
+    single column inner table and fill one cell of an outer table. The
+    group is expected to contain items in a location sorted by order,
+    or in a store department sorted alphabetically.
 
+    Parameters
+    ----------
+    fp : _io.TextIOWrapper
+        File pointer
+    group : pd.DataFrame
+        Pandas DataFrame containing items to write
+    n_inner_rows : int
+        Number of rows in the inner table
+    name : None or str
+        Name of the group location or department
+    write_rule : boolean
+        Flag to write rule, or not
+
+    Returns
+    -------
+    pd.DataFrame
+        Pandas DataFrame containing items that were not written
+    """
+    # Begin tabular environment
     fp.write(r"    \begin{tabular}[t]{" + inner_algn + "}\n")
     fp.write(r"    \\" + "\n")
+
+    # Write the name of the group location or department, if needed
     if name:
         fp.write(
             r"    \multicolumn{"
@@ -49,141 +106,187 @@ def print_outer_cell(fp, group, n_inner_rows, name=None, print_rule=False):
         fp.write(r"    \\" + "\n")
         n_inner_rows -= 2
 
+    # Write the specified number of items
     n_inner_row = 0
     indexes = []
-
     for index, row in group.iterrows():
-        if print_rule:
+        if write_rule:
+            # Write the rule, noting that the rule counts as one of the rows
             fp.write(
                 r"    \rule[0pt]{0.25in}{0.5pt} &"
                 + " & ".join(escape_specials(row[inner_cols[1:]].values))
             )
 
         else:
+            # Write an item quantity, unit, and name
             fp.write("      " + " & ".join(escape_specials(row[inner_cols].values)))
-
         n_inner_row += 1
         indexes.append(index)
 
         if n_inner_row < n_inner_rows and n_inner_row < group.shape[0]:
+            # Terminate a row if it is not the last row in the table or last item in the group
             fp.write(r" \\" + "\n")
 
         else:
+            # Wrote the specified number or rows, or all items in the group
             break
 
+    # End tabular environment
     fp.write("\n" + r"    \end{tabular}" + "\n")
 
+    # Return the group with all written itmes dropped
     return group.drop(index=indexes)
 
 
-def print_group_by(fp, group_by_label, group_names, n_inner_rows, print_rule=False):
+def write_group_by(fp, group_by_label, group_names, n_inner_rows, write_rule=False):
+    """Write the specified number of outer table rows and columns
+    until all items in every group have been written. Groups contain
+    all items in every location, or every store department. Writes the
+    location or department name when starting to write items from the
+    corresponding group.
 
+    Parameters
+    ----------
+    fp : _io.TextIOWrapper
+        File pointer
+    group_by_label = pandas.api.typing.DataFrameGroupBy
+        A groupby object that contains information about the groups
+    n_inner_rows : int
+        Number of rows in the inner table
+    write_rule : boolean
+        Flag to write rule, or not
+
+    Returns
+    -------
+    None
+    """
+    # Begin tabular environment
     fp.write(r"  \begin{tabular}[t]{" + " p{2.5in} " * n_outer_cols + "}\n")
 
+    # Write the specified number of outer table rows and columns until
+    # all items in every group have been written.
     n_outer_row = 0
     n_outer_col = 0
-
     current_group_name = ""
     for name in group_names:
         group = group_by_label.get_group(name)
 
+        # Write the group until it is consumed
         while group.shape[0] > 0:
 
+            # Write group items
             if name == current_group_name:
-                group = print_outer_cell(fp, group, n_inner_rows, print_rule=print_rule)
+                # Write group name when first encountered
+                group = write_outer_cell(fp, group, n_inner_rows, write_rule=write_rule)
 
             else:
                 current_group_name = name
-                group = print_outer_cell(
+                group = write_outer_cell(
                     fp,
                     group,
                     n_inner_rows,
                     name=current_group_name,
-                    print_rule=print_rule,
+                    write_rule=write_rule,
                 )
 
+            # Count columns and check
             n_outer_col += 1
-
             if n_outer_col < n_outer_cols:
-                # if group.shape[0] > 0 or name != last_group_name:
                 if group.shape[0] > 0 or name != group_names[-1]:
+                    # Separate cells if more items in the current
+                    # group, or in another group need to be written
                     fp.write("    &\n")
 
             else:
 
+                # Count rows and check
                 n_outer_row += 1
-
                 if n_outer_row < n_outer_rows:
+                    # Terminate row if not the last
                     fp.write(r"  \\" + "\n")
                     fp.write(r"  \\" + "\n")
 
+                    # Reinitialize number of columns
                     n_outer_col = 0
 
+            # Check number of rows and columns
             if n_outer_row == n_outer_rows and n_outer_col == n_outer_cols:
 
+                # End tabular environment since the specified number
+                # of rows and columns have been written
+                fp.write(r"  \end{tabular}" + "\n")
+
+                # Reinitialize number of rows and columns
                 n_outer_row = 0
                 n_outer_col = 0
 
-                fp.write(r"  \end{tabular}" + "\n")
-
-                # if group.shape[0] > 0 or name != last_group_name:
+                # Begin tablular environment if more items in the
+                # current group, or in another group need to be
+                # written
                 if group.shape[0] > 0 or name != group_names[-1]:
-
                     fp.write(
                         r"  \begin{tabular}[t]{" + " p{2.5in} " * n_outer_cols + "}\n"
                     )
 
-            # elif group.shape[0] == 0 and name == last_group_name:
             elif group.shape[0] == 0 and name == group_names[-1]:
 
+                # End tabular environment since no more items need to
+                # be written
                 fp.write(r"  \end{tabular}" + "\n")
 
 
 def main():
-
+    """Provide a command line interface to typesetting supply
+    inventories and corresponding shoping lists.
+    """
     parser = ArgumentParser(
         description="Typeset supplies and corresponding shopping lists"
     )
     parser.add_argument(
         "-i",
         "--inventory-filename",
-        default="../resources/inventory-2024-08-09.csv",
+        default="../resources/inventory-2024-08-12.csv",
         help="the inventory filename",
     )
     parser.add_argument(
         "-s",
         "--supplies",
         action="store_true",
-        help="print supplies inventory",
+        help="write supplies inventory",
     )
     parser.add_argument(
         "-m",
         "--market-basket",
         action="store_true",
-        help="print market basket shopping list",
+        help="write market basket shopping list",
     )
     parser.add_argument(
         "-t",
         "--trader-joes",
         action="store_true",
-        help="print trader joe's shopping list",
+        help="write trader joe's shopping list",
     )
     args = parser.parse_args()
-    
+
+    # Read the inventory file
     inventory = pd.read_csv(args.inventory_filename).fillna("")
 
     if args.supplies:
+
+        # Write supplies inventory
 
         tex_filename = "supplies.tex"
 
         with open(tex_filename, "w") as fp:
 
-            open_document(fp)
+            begin_document(fp)
 
             fp.write(r"\textbf{Supplies}")
             fp.write(r"\newline")
 
-            group_by_location = inventory.groupby("location")
+            group_by_location = inventory.sort_values(
+                ["ord", "item"]
+            ).groupby("location")
             group_names = [
                 "fridge",
                 "tall cabinet",
@@ -201,19 +304,21 @@ def main():
                 "bathroom cabinet",
             ]
             n_inner_rows = int(group_by_location.size().median())
-            print_group_by(fp, group_by_location, group_names, n_inner_rows)
+            write_group_by(fp, group_by_location, group_names, n_inner_rows)
 
-            close_document(fp)
+            end_document(fp)
 
         run(["pdflatex", tex_filename])
 
     if args.market_basket:
 
+        # Write Market Basket shopping list
+
         tex_filename = "market_basket.tex"
 
         with open(tex_filename, "w") as fp:
 
-            open_document(fp)
+            begin_document(fp)
 
             fp.write(r"\textbf{Market Basket}")
             fp.write(r"\newline")
@@ -223,6 +328,7 @@ def main():
                     inner_cols + ["department"]
                 ]
                 .drop_duplicates()
+                .sort_values("item")
                 .groupby("department")
             )
             group_names = [
@@ -241,21 +347,23 @@ def main():
                 "fruits & vegetables",
             ]
             n_inner_rows = 17
-            print_group_by(
-                fp, group_by_store, group_names, n_inner_rows, print_rule=True
+            write_group_by(
+                fp, group_by_store, group_names, n_inner_rows, write_rule=True
             )
 
-            close_document(fp)
+            end_document(fp)
 
         run(["pdflatex", tex_filename])
 
     if args.trader_joes:
 
+        # Write Trader Joe's shopping list
+
         tex_filename = "trader_joes.tex"
 
         with open(tex_filename, "w") as fp:
 
-            open_document(fp)
+            begin_document(fp)
 
             fp.write(r"\textbf{Trader Joe's}")
             fp.write(r"\newline")
@@ -265,6 +373,7 @@ def main():
                     inner_cols + ["department"]
                 ]
                 .drop_duplicates()
+                .sort_values("item")
                 .groupby("department")
             )
             group_names = [
@@ -279,13 +388,14 @@ def main():
                 "chocolate, cookies & crackers",
             ]
             n_inner_rows = 11
-            print_group_by(
-                fp, group_by_store, group_names, n_inner_rows, print_rule=True
+            write_group_by(
+                fp, group_by_store, group_names, n_inner_rows, write_rule=True
             )
 
-            close_document(fp)
+            end_document(fp)
 
         run(["pdflatex", tex_filename])
+
 
 if __name__ == "__main__":
     main()
