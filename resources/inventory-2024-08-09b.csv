@@ -1,0 +1,370 @@
+qty,unt,item,location,ord,store,department
+1,pkg,15 g blue bags,basement shelves,1,market basket,service
+1,pkg,15 g blue bags,trash cabinet,1,market basket,service
+1,pkg,33 g blue bags,basement shelves,2,market basket,service
+1,pkg,33 g blue bags,trash cabinet,3,market basket,service
+2,pkg,70% baking chocolate,basement stair landing,1,market basket,baking
+1,pkg,aleppo soap,bathroom cabinet,1,amazon,
+1,pkg,aleppo soap,bathroom closet,1,amazon,
+1,bag,all purpose flour,basement shelves,1,market basket,baking
+1,bag,all purpose flour,basement stair landing,1,market basket,baking
+2,btl,almond butter,basement shelves,2,trader joe's,staples
+2,btl,almond butter,basement stair landing,3,trader joe's,staples
+1,btl,almond butter,fridge,1,trader joe's,staples
+1,btl,almond extract,basement shelves,1,trader joe's,staples
+1,btl,almond extract,cooking cabinet,1,trader joe's,staples
+1,bag,almond meal,basement shelves,2,market basket,baking
+1,bag,almond meal,basement stair landing,3,market basket,baking
+1,btl,ammonia,laundry,4,market basket,cleaning
+1,btl,ammonia,basement shelves,4,market basket,cleaning
+1,can,anchovies,basement shelves,5,trader joe's,staples
+1,can,anchovies,basement stair landing,6,trader joe's,staples
+1,btl,apple cider vinegar,basement stair landing,8,trader joe's,staples
+1,btl,apple cider vinegar,cooking cabinet,9,trader joe's,staples
+3,lbs,apples,fridge,10,idylwilde,
+1,bag,arugula,fridge,11,trader joe's,fruits & vegetables
+1,lbs,assam,basement shelves,1,upton teas,
+1,lbs,assam,tea and coffee cabinet,1,upton teas,
+1,btl,avocado oil,basement shelves,2,trader joe's,staples
+1,btl,avocado oil,basement stair landing,3,trader joe's,staples
+1,btl,avocado oil,cooking cabinet,3,trader joe's,staples
+3,,avocados,fridge,4,trader joe's,fruits & vegetables
+1,pkg,bacon,fridge,5,butcher box,
+1,pkg,baking cocoa,basement stair landing,7,market basket,baking
+2,pkg,baking powder,basement shelves,8,market basket,baking
+2,pkg,baking powder,basement stair landing,9,market basket,baking
+1,pkg,baking powder,cooking cabinet,10,market basket,baking
+1,pkg,baking soda,basement shelves,11,market basket,baking
+1,pkg,baking soda,basement stair landing,12,market basket,baking
+1,pkg,baking soda,cooking cabinet,13,market basket,baking
+1,btl,balsamic vinegar,basement stair landing,14,trader joe's,staples
+1,btl,balsamic vinegar,cooking cabinet,15,trader joe's,staples
+1,can,bar keepers friend,basement shelves,15,market basket,cleaning
+1,can,bar keepers friend,sink cabinet,16,market basket,cleaning
+1,box,beef broth,basement shelves,17,trader joe's,staples
+1,box,beef broth,basement stair landing,18,trader joe's,staples
+3,lbs,beef roast,freezer,1,butcher box,
+1,12p,beer,basement stair landing,3,colonial spirits,
+2,cans,beer,fridge,3,colonial spirits,
+1,bag,better for bread flour,basement shelves,5,market basket,baking
+1,bag,better for bread flour,tall cabinet,6,market basket,baking
+2,can,black beans,basement shelves,6,trader joe's,staples
+2,can,black beans,basement stair landing,7,trader joe's,staples
+1,btl,bleach,basement shelves,8,market basket,cleaning
+1,btl,bleach,laundry,1,market basket,cleaning
+1,box,blueberries,fridge,4,trader joe's,fruits & vegetables
+1,can,bon ami,basement shelves,2,market basket,cleaning
+1,can,bon ami,sink cabinet,3,market basket,cleaning
+1,bag,bread crumbs,basement stair landing,5,trader joe's,staples
+1,pkg,breakfast sausage,fridge,6,butcher box,
+1,pkg,brie,fridge,7,trader joe's,cheese & crackers
+1,bag,brown rice flour,basement shelves,8,market basket,baking
+1,bag,brown rice flour,basement stair landing,10,market basket,baking
+1,bag,brown sugar,basement shelves,12,trader joe's,staples
+1,bag,brown sugar,basement stair landing,13,trader joe's,staples
+1,bag,brown sugar,cooking cabinet,12,trader joe's,staples
+1,pkg,butter substitute,freezer,14,market basket,dairy & eggs
+1,bag,cane sugar,basement shelves,15,trader joe's,staples
+1,bag,cane sugar,basement stair landing,15,trader joe's,staples
+1,btl,capers,basement stair landing,17,trader joe's,staples
+1,btl,capers,fridge,18,trader joe's,staples
+1,bag,carrots,fridge,19,trader joe's,fruits & vegetables
+1,btl,castile soap,basement shelves,20,market basket,cleaning
+1,btl,castile soap,sink cabinet,21,market basket,pharmacy
+1,bag,celery,fridge,22,trader joe's,fruits & vegetables
+1,lbs,ceylon,basement shelves,23,upton teas,
+1,lbs,ceylon,tea and coffee cabinet,23,upton teas,
+16,ozs,cheddar (for grating),freezer,24,trader joe's,cheese & crackers
+1,box,chemex filters,basement shelves,25,amazon,
+1,box,chemex filters,tea and coffee cabinet,25,amazon,
+1,bag,chia seeds,basement shelves,26,trader joe's,"chocolate, cookies & crackers"
+1,bag,chia seeds,cooking cabinet,26,trader joe's,"chocolate, cookies & crackers"
+3,lbs,chicken breast,freezer,27,butcher box,
+1,box,chicken broth,basement shelves,28,trader joe's,staples
+1,box,chicken broth,basement stair landing,29,trader joe's,staples
+3,lbs,chicken thighs,freezer,30,butcher box,
+1,bar,chocolate bars,basement shelves,1,trader joe's,"chocolate, cookies & crackers"
+1,bar,chocolate bars,snack station,1,trader joe's,"chocolate, cookies & crackers"
+1,box,chocolate candies,basement shelves,2,trader joe's,"chocolate, cookies & crackers"
+1,box,chocolate candies,snack station,2,trader joe's,"chocolate, cookies & crackers"
+2,bag,chocolate chips,basement shelves,3,market basket,baking
+2,bag,chocolate chips,basement stair landing,4,market basket,baking
+1,btl,clam juice,basement shelves,5,market basket,condiments
+1,btl,clam juice,basement stair landing,6,market basket,condiments
+2,can,coconut cream,basement shelves,7,trader joe's,staples
+2,can,coconut cream,basement stair landing,8,trader joe's,staples
+1,btl,coconut oil,basement stair landing,9,trader joe's,staples
+1,btl,coconut oil,cooking cabinet,9,trader joe's,staples
+1,bag,coffee dark roast,tea and coffee cabinet,10,acton coffee,
+1,bag,coffee light roast,tea and coffee cabinet,11,acton coffee,
+1,bag,collards (frozen),freezer,12,market basket,freezer
+1,btl,conditioner,bathroom cabinet,13,cvs,
+1,btl,conditioner,bathroom closet,14,cvs,
+1,bag,corn meal,cooking cabinet,15,market basket,baking
+1,bag,corn meal,basement stair landing,16,market basket,baking
+1,btl,corn starch,basement shelves,17,market basket,baking
+1,btl,corn starch,basement stair landing,18,market basket,baking
+1,btl,corn starch,cooking cabinet,19,market basket,baking
+1,bag,demerara cane sugar,basement stair landing,21,trader joe's,staples
+4,can,diced & fire rstd tomatoes,basement shelves,22,trader joe's,staples
+4,can,diced & fire rstd tomatoes,basement stair landing,23,trader joe's,staples
+1,btl,dijon mustard,basement shelves,24,trader joe's,staples
+1,btl,dijon mustard,basement stair landing,25,trader joe's,staples
+1,btl,dijon mustard,fridge,26,trader joe's,staples
+1,jug,dishwashing detergent,basement shelves,27,market basket,cleaning
+1,jug,dishwashing detergent,sink cabinet,28,market basket,cleaning
+1,box,dishwashing tabs,basement shelves,29,market basket,cleaning
+1,box,dishwashing tabs,sink cabinet,30,market basket,cleaning
+6,jug,distilled water,basement shelves,31,market basket,water
+1,jug,distilled water,bathroom cabinet,31,market basket,water
+1,box,dried fruit,basement shelves,32,trader joe's,nuts & dried fruit
+1,box,dried fruit,snack station,32,trader joe's,nuts & dried fruit
+1,pkg,dried milk,basement shelves,33,amazon,
+1,pkg,dried milk,basement stair landing,34,amazon,
+3,,egg plant,fridge,35,market basket,fruits & vegetables
+4,dzn,eggs,fridge,36,trader joe's,dairy & eggs
+1,bag,erythritol and stevia,basement shelves,37,market basket,baking
+1,bag,erythritol and stevia,cooking cabinet,37,market basket,baking
+3,lbs,extra lean turken,freezer,38,butcher box,
+1,box,feta,fridge,39,trader joe's,cheese & crackers
+1,box,fine sea salt,basement shelves,40,market basket,baking
+1,box,fine sea salt,basement stair landing,41,market basket,baking
+1,box,fine sea salt,cooking cabinet,42,market basket,baking
+3,lbs,fish,freezer,43,butcher box,
+1,btl,fish sauce,fridge,44,market basket,condiments
+1,bag,flaked coconut,basement shelves,45,trader joe's,nuts & dried fruit
+1,bag,flaked coconut,basement stair landing,46,trader joe's,nuts & dried fruit
+2,8p,flavored seltzer,basement shelves,47,market basket,water
+2,8p,flavored seltzer,basement stair landing,48,market basket,water
+1,bag,flax seed meal,basement stair landing,52,market basket,baking
+1,bag,flax seed meal,fridge,51,market basket,baking
+1,pkg,floss,bathroom cabinet,54,cvs,
+1,pkg,floss,bathroom closet,55,cvs,
+1,,fresh garlic,basement stair landing,56,trader joe's,fruits & vegetables
+1,,fresh garlic,cooking cabinet,57,trader joe's,fruits & vegetables
+1,,fresh ginger,freezer,58,market basket,fruits & vegetables
+1,bag,fruit (frozen),freezer,59,trader joe's,fruits & vegetables
+2,can,garbanzo beans,basement shelves,60,trader joe's,staples
+2,can,garbanzo beans,basement stair landing,61,trader joe's,staples
+16,oz,genmaicha,tea and coffee cabinet,62,upton teas,
+1,box,ginger tea bags,basement shelves,63,market basket,baking
+1,box,ginger tea bags,tea and coffee cabinet,63,market basket,baking
+1,btl,grainy mustard,basement shelves,64,trader joe's,staples
+1,btl,grainy mustard,basement stair landing,65,trader joe's,staples
+1,btl,grainy mustard,fridge,66,trader joe's,staples
+1,btl,green salsa,basement shelves,67,trader joe's,staples
+1,btl,green salsa,basement stair landing,68,trader joe's,staples
+1,bag,grits,basement shelves,69,trader joe's,bread
+1,bag,grits,basement stair landing,70,trader joe's,bread
+3,lbs,ground beef,freezer,71,butcher box,
+3,lbs,ground pork,freezer,73,butcher box,
+16,oz,gruyere (for grating),freezer,74,trader joe's,cheese & crackers
+1,12p,guiness,basement stair landing,5,colonial spirits,
+2,cans,guiness,fridge,5,colonial spirits,
+1,btl,head & shoulders shampoo,bathroom cabinet,75,cvs,
+1,btl,head & shoulders shampoo,bathroom closet,76,cvs,
+1,btl,honey,basement shelves,77,trader joe's,staples
+1,btl,honey,basement stair landing,78,trader joe's,staples
+1,btl,honey,cooking cabinet,79,trader joe's,staples
+1,box,hot chocolate mix,basement shelves,80,trader joe's,coffee & tea
+1,btl,isopropyl alcohol,bathroom cabinet,81,cvs,
+1,btl,isopropyl alcohol,bathroom closet,82,cvs,
+1,btl,italian evoo,basement shelves,83,trader joe's,staples
+1,btl,italian evoo,basement stair landing,84,trader joe's,staples
+1,btl,italian evoo,cooking cabinet,85,trader joe's,staples
+3,lbs,italian sausage,freezer,86,butcher box,
+1,btl,ivory snow,basement shelves,87,market basket,cleaning
+1,btl,ivory snow,laundry,88,market basket,cleaning
+1,btl,jam,basement shelves,89,market basket,condiments
+1,btl,jam,basement stair landing,89,market basket,condiments
+1,btl,jam,fridge,89,market basket,condiments
+16,oz,keemum,basement shelves,90,upton teas,
+16,oz,keemum,tea and coffee cabinet,90,upton teas,
+6,box,kleenex,basement shelves,91,market basket,paper
+6,box,kleenex,basement stair landing,92,market basket,paper
+1,box,kosher salt,basement shelves,93,market basket,baking
+1,box,kosher salt,basement stair landing,94,market basket,baking
+1,box,kosher salt,cooking cabinet,95,market basket,baking
+1,box,lasagna noodles,basement stair landing,97,market basket,pasta
+1,btl,laundry detergent,basement shelves,98,market basket,cleaning
+1,btl,laundry detergent,laundry,99,market basket,cleaning
+2,,leafy greens,fridge,100,market basket,fruits & vegetables
+1,box,lemon tea bags,basement shelves,101,market basket,baking
+1,box,lemon tea bags,tea and coffee cabinet,101,market basket,baking
+6,,lemons,fridge,102,trader joe's,fruits & vegetables
+1,,lettuce,fridge,103,idylwilde,
+6,,limes,fridge,104,trader joe's,fruits & vegetables
+1,btl,maple syrup,fridge,105,trader joe's,staples
+2,btl,marinara,basement shelves,106,trader joe's,staples
+2,btl,marinara,basement stair landing,107,trader joe's,staples
+1,can,matcha mix,basement shelves,108,trader joe's,coffee & tea
+1,can,matcha mix,tea and coffee cabinet,108,trader joe's,coffee & tea
+1,btl,mayonnaise,fridge,109,trader joe's,staples
+1,btl,mayonnaise,basement stair landing,109,trader joe's,staples
+1,,melon,fridge,110,trader joe's,fruits & vegetables
+2,qts,milk,fridge,111,trader joe's,dairy & eggs
+1,box,mint tea bags,basement shelves,112,market basket,baking
+1,box,mint tea bags,tea and coffee cabinet,112,market basket,baking
+1,btl,mirin,fridge,113,h-mart,
+1,btl,mirin,basement stair landing,114,h-mart,
+1,pkg,miso,fridge,115,h-mart,
+1,btl,molasses,basement shelves,116,trader joe's,staples
+1,btl,molasses,basement stair landing,117,trader joe's,staples
+1,btl,molasses,cooking cabinet,118,trader joe's,staples
+16,oz,mozzarella (for grating),freezer,119,trader joe's,cheese & crackers
+1,btl,murphy's oil soap,basement shelves,120,market basket,cleaning
+1,pkg,napkins,basement shelves,121,market basket,paper
+1,pkg,napkins,basement stair landing,122,market basket,paper
+4,can,no salt diced tomatoes,basement shelves,123,trader joe's,staples
+4,can,no salt diced tomatoes,basement stair landing,124,trader joe's,staples
+16,oz,oolong,tea and coffee cabinet,125,yunnan sourcing,
+3,,oranges,fridge,126,trader joe's,fruits & vegetables
+1,pkg,oxyclean,basement shelves,127,market basket,cleaning
+1,pkg,oxyclean,laundry,128,market basket,cleaning
+6,box,parchment paper,basement stair landing,129,market basket,wraps
+1,box,parchment paper,cooking drawer,1,market basket,wraps
+8,oz,parmesan,fridge,3,whole foods,cheese & crackers
+16,oz,parmesan (grated),freezer,2,trader joe's,cheese & crackers
+1,bch,parsley,fridge,4,market basket,fruits & vegetables
+2,btl,peanut butter,basement shelves,5,trader joe's,staples
+2,btl,peanut butter,basement stair landing,6,trader joe's,staples
+1,btl,peanut butter,fridge,7,trader joe's,staples
+2,bag,peanuts,snack station,8,trader joe's,nuts & dried fruit
+3,lbs,pears,fridge,9,idylwilde,
+2,bag,pecans,snack station,10,trader joe's,nuts & dried fruit
+1,btl,peroxide,bathroom cabinet,12,cvs,
+1,btl,peroxide,bathroom closet,13,cvs,
+1,btl,peroxide,laundry,14,cvs,
+2,btl,pickles,basement shelves,15,market basket,condiments
+2,btl,pickles,basement stair landing,16,market basket,condiments
+2,btl,pickles,fridge,17,market basket,condiments
+1,pkg,picks,bathroom cabinet,18,cvs,
+1,pkg,picks,bathroom closet,19,cvs,
+2,12p,plain seltzer,basement shelves,20,market basket,water
+2,12p,plain seltzer,basement stair landing,21,market basket,water
+1,box,plastic wrap,basement stair landing,22,market basket,wraps
+1,box,plastic wrap,cooking drawer,23,market basket,wraps
+3,lbs,pork roast,freezer,24,butcher box,
+2,lbs,pork tenderloin,freezer,25,butcher box,
+3,lbs,potatoes,basement stair landing,28,trader joe's,fruits & vegetables
+1,bag,powdered sugar,basement shelves,29,trader joe's,staples
+1,bag,powdered sugar,basement stair landing,30,trader joe's,staples
+8,oz,pu erh,tea and coffee cabinet,31,yunnan sourcing,
+1,bag,puffed wheat,basement shelves,32,whole foods,cereal
+1,bag,puffed wheat,basement stair landing,33,whole foods,cereal
+2,can,pumpkin,basement shelves,34,market basket,baking
+2,can,pumpkin,basement stair landing,35,trader joe's,staples
+1,box,q-tips,bathroom cabinet,36,cvs,
+1,box,q-tips,bathroom closet,37,cvs,
+1,box,raspberries,fridge,6,trader joe's,fruits & vegetables
+2,bag,raw almonds,freezer,38,trader joe's,nuts & dried fruit
+2,bag,raw pecans,freezer,40,trader joe's,nuts & dried fruit
+1,bag,raw pumpkin seeds,basement shelves,42,trader joe's,nuts & dried fruit
+1,bag,raw pumpkin seeds,basement stair landing,43,trader joe's,nuts & dried fruit
+1,bag,raw sunflower seeds,basement shelves,44,trader joe's,nuts & dried fruit
+1,bag,raw sunflower seeds,basement stair landing,45,trader joe's,nuts & dried fruit
+1,pkg,razor blades,bathroom cabinet,46,cvs,
+1,pkg,razor blades,bathroom closet,47,cvs,
+1,,red cabbage,fridge,48,market basket,fruits & vegetables
+3,lbs,red onions,basement stair landing,49,trader joe's,fruits & vegetables
+1,btl,red wine vinegar,basement shelves,50,trader joe's,staples
+1,btl,red wine vinegar,basement stair landing,51,trader joe's,staples
+1,btl,red wine vinegar,cooking cabinet,52,trader joe's,staples
+1,btl,rice vinegar,basement shelves,53,h-mart,
+1,btl,rice vinegar,basement stair landing,54,trader joe's,staples
+1,btl,rice vinegar,cooking cabinet,55,trader joe's,staples
+1,bag,rolled oats,basement shelves,56,market basket,baking
+1,bag,rolled oats,basement stair landing,57,market basket,baking
+1,box,saline packets,bathroom cabinet,58,cvs,
+1,box,saline packets,bathroom closet,59,cvs,
+2,box,salted butter,freezer,60,trader joe's,dairy & eggs
+2,box,salted butter,fridge,61,trader joe's,dairy & eggs
+1,box,sandwich bags,basement stair landing,62,market basket,wraps
+1,box,sandwich bags,cooking drawer,63,market basket,wraps
+1,btl,sanitizer,basement shelves,64,cvs,
+4,can,sardines,basement shelves,65,trader joe's,staples
+4,can,sardines,basement stair landing,66,trader joe's,staples
+1,,savoy cabbage,fridge,67,market basket,fruits & vegetables
+16,oz,sencha,basement shelves,69,upton teas,
+16,oz,sencha,tea and coffee cabinet,69,upton teas,
+1,can,sesame seed oil,basement shelves,70,h-mart,
+1,can,sesame seed oil,basement stair landing,71,h-mart,
+16,ox,sesame seeds,cooking cabinet,72,amazon,
+1,tub,shaving cream,bathroom cabinet,73,target,
+1,tub,shaving cream,bathroom closet,74,target,
+2,con,skyr,fridge,75,Roche Brothers,dairy & eggs
+1,box,sleepy time tea bags,basement shelves,76,market basket,baking
+1,box,sleepy time tea bags,tea and coffee cabinet,76,market basket,baking
+1,box,sos pads,basement shelves,77,market basket,cleaning
+1,box,sos pads,sink cabinet,78,market basket,cleaning
+1,btl,soy sauce,fridge,79,h-mart,
+1,btl,soy sauce,basement shelves,79,h-mart,
+1,btl,soy sauce,basement stair landing,80,h-mart,
+1,btl,spanish evoo,basement shelves,81,trader joe's,staples
+1,btl,spanish evoo,basement stair landing,82,trader joe's,staples
+1,btl,spanish evoo,cooking cabinet,83,trader joe's,staples
+1,pkg,spinach,freezer,84,market basket,freezer
+1,bag,spinach (frozen),fridge,85,market basket,fruits & vegetables
+3,,squash,basement stair landing,86,market basket,fruits & vegetables
+1,btl,stain remover,basement shelves,87,market basket,cleaning
+1,btl,stain remover,laundry,88,market basket,cleaning
+1,bag,steel cut oats,basement shelves,89,trader joe's,bread
+1,bag,steel cut oats,cooking cabinet,90,trader joe's,bread
+3,lbs,stock bones,freezer,91,market basket,meat
+1,box,storage bags,basement stair landing,92,market basket,wraps
+1,box,storage bags,cooking drawer,93,market basket,wraps
+1,box,strawberries,fridge,5,trader joe's,fruits & vegetables
+3,lbs,sweet potatoes,basement stair landing,94,trader joe's,fruits & vegetables
+1,bag,sweetened coconut,basement shelves,95,market basket,baking
+1,bag,sweetened coconut,basement stair landing,96,market basket,baking
+16,oz,swiss (for grating),freezer,97,trader joe's,cheese & crackers
+1,box,tapioca,cooking cabinet,98,market basket,baking
+1,bag,tapioca starch,basement shelves,99,market basket,baking
+1,bag,tapioca starch,basement stair landing,100,market basket,baking
+1,box,thick aluminum foil,basement stair landing,101,market basket,wraps
+1,box,thin aluminum foil,basement stair landing,102,market basket,wraps
+1,box,thin aluminum foil,cooking drawer,103,market basket,wraps
+1,12p,toilet paper,basement shelves,104,market basket,paper
+1,12p,toilet paper,bathroom closet,104,market basket,paper
+2,can,tomato paste,basement shelves,105,trader joe's,staples
+2,can,tomato paste,basement stair landing,106,trader joe's,staples
+2,can,trout,basement shelves,107,trader joe's,staples
+2,can,trout,basement stair landing,108,trader joe's,staples
+4,can,herring,basement shelves,109,trader joe's,staples
+4,can,herring,basement stair landing,110,trader joe's,staples
+3,lbs,turkey thighs,freezer,111,butcher box,
+2,box,unsalted butter,freezer,112,trader joe's,dairy & eggs
+1,pkg,unsweetened baking chocolate,basement stair landing,114,market basket,baking
+1,btl,vanicream cream,bathroom cabinet,115,cvs,
+1,btl,vanicream cream,bathroom closet,116,cvs,
+1,btl,vanicream lotion,bathroom cabinet,117,cvs,
+1,btl,vanicream lotion,bathroom closet,118,cvs,
+1,btl,vanilla extract,basement stair landing,119,trader joe's,staples
+1,btl,vanilla extract,cooking cabinet,119,trader joe's,staples
+1,box,vegetable broth,basement shelves,120,trader joe's,staples
+1,box,vegetable broth,basement stair landing,121,trader joe's,staples
+1,btl,veggie wash,basement shelves,122,trader joe's,pharmacy
+1,btl,veggie wash,sink cabinet,123,trader joe's,pharmacy
+2,bag,walnuts,snack station,124,trader joe's,nuts & dried fruit
+1,box,waxed paper,basement stair landing,125,market basket,wraps
+1,box,waxed paper,cooking drawer,126,market basket,wraps
+1,bag,whey powder,basement shelves,127,market basket,pharmacy
+1,bag,whey powder,cooking cabinet,127,market basket,pharmacy
+1,bag,white rice flour,basement shelves,128,market basket,baking
+1,bag,white rice flour,basement stair landing,130,market basket,baking
+2,can,whole plum tomatoes,basement shelves,132,trader joe's,staples
+2,can,whole plum tomatoes,basement stair landing,133,trader joe's,staples
+1,bag,whole wheat flour,basement stair landing,134,market basket,baking
+d,bag,whole wheat flour,tall cabinet,134,market basket,baking
+1,bag,wild rice,basement stair landing,136,market basket,
+1,box,wine,basement stair landing,137,colonial spirits,
+1,box,wine,fridge,138,colonial spirits,
+1,btl,wool wash,basement shelves,139,amazon,
+1,btl,wool wash,laundry,140,amazon,
+1,btl,worcestershire sauce,basement stair landing,141,trader joe's,staples
+1,btl,worcestershire sauce,cooking cabinet,141,trader joe's,staples
+1,btl,yeast,basement stair landing,142,whole foods,baking
+1,btl,yeast,cooking cabinet,142,whole foods,baking
+3,lbs,yellow onions,basement stair landing,143,trader joe's,fruits & vegetables
+2,con,yogurt,fridge,144,market basket,dairy & eggs
+3,,zucchini,fridge,145,market basket,fruits & vegetables
