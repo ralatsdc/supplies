@@ -245,156 +245,99 @@ def main():
     parser.add_argument(
         "-i",
         "--inventory-filename",
-        default="../resources/inventory-2024-08-12.csv",
+        default="../resources/inventory-2024-08-16.csv",
         help="the inventory filename",
-    )
-    parser.add_argument(
-        "-s",
-        "--supplies",
-        action="store_true",
-        help="write supplies inventory",
-    )
-    parser.add_argument(
-        "-m",
-        "--market-basket",
-        action="store_true",
-        help="write market basket shopping list",
-    )
-    parser.add_argument(
-        "-t",
-        "--trader-joes",
-        action="store_true",
-        help="write trader joe's shopping list",
     )
     args = parser.parse_args()
 
     # Read the inventory file
     inventory = pd.read_csv(args.inventory_filename).fillna("")
 
-    if args.supplies:
+    # Write and typeset supplies inventory
+    tex_filename = "../documents/supplies.tex"
+    with open(tex_filename, "w") as fp:
+        begin_document(fp)
+        fp.write(r"\textbf{supplies}")
+        fp.write(r"\newline")
+        group_by_location = inventory.sort_values(["ord", "item"]).groupby("location")
+        group_names = [
+            "fridge",
+            "tall cabinet",
+            "tea and coffee cabinet",
+            "cooking cabinet",
+            "cooking drawer",
+            "trash cabinet",
+            "sink cabinet",
+            "bathroom closet",
+            "snack station",
+            "basement stair landing",
+            "basement shelves",
+            "freezer",
+            "laundry",
+            "bathroom cabinet",
+        ]
+        n_inner_rows = int(group_by_location.size().median())
+        write_group_by(fp, group_by_location, group_names, n_inner_rows)
+        end_document(fp)
+    run(["pdflatex", tex_filename], cwd="../documents")
 
-        # Write supplies inventory
-
-        tex_filename = "supplies.tex"
-
+    # Write and typeset shopping lists
+    for store in inventory["store"].unique():
+        tex_filename = (
+            "../documents/" + store.replace(" ", "_").replace("'", "") + ".tex"
+        )
         with open(tex_filename, "w") as fp:
-
             begin_document(fp)
-
-            fp.write(r"\textbf{Supplies}")
+            fp.write(r"\textbf{" + f"{store}" + r"}")
             fp.write(r"\newline")
-
-            group_by_location = inventory.sort_values(
-                ["ord", "item"]
-            ).groupby("location")
-            group_names = [
-                "fridge",
-                "tall cabinet",
-                "tea and coffee cabinet",
-                "cooking cabinet",
-                "cooking drawer",
-                "trash cabinet",
-                "sink cabinet",
-                "bathroom closet",
-                "snack station",
-                "basement stair landing",
-                "basement shelves",
-                "freezer",
-                "laundry",
-                "bathroom cabinet",
-            ]
-            n_inner_rows = int(group_by_location.size().median())
-            write_group_by(fp, group_by_location, group_names, n_inner_rows)
-
-            end_document(fp)
-
-        run(["pdflatex", tex_filename])
-
-    if args.market_basket:
-
-        # Write Market Basket shopping list
-
-        tex_filename = "market_basket.tex"
-
-        with open(tex_filename, "w") as fp:
-
-            begin_document(fp)
-
-            fp.write(r"\textbf{Market Basket}")
-            fp.write(r"\newline")
-
             group_by_store = (
-                inventory[inventory["store"] == "market basket"][
-                    inner_cols + ["department"]
-                ]
+                inventory[inventory["store"] == store][inner_cols + ["department"]]
                 .drop_duplicates()
                 .sort_values("item")
                 .groupby("department")
             )
-            group_names = [
-                "service",
-                "dairy & eggs",
-                "meat",
-                "condiments",
-                "baking",
-                "pasta",
-                "pharmacy",
-                "paper",
-                "wraps",
-                "cleaning",
-                "water",
-                "freezer",
-                "fruits & vegetables",
-            ]
-            n_inner_rows = 17
-            write_group_by(
-                fp, group_by_store, group_names, n_inner_rows, write_rule=True
-            )
 
-            end_document(fp)
-
-        run(["pdflatex", tex_filename])
-
-    if args.trader_joes:
-
-        # Write Trader Joe's shopping list
-
-        tex_filename = "trader_joes.tex"
-
-        with open(tex_filename, "w") as fp:
-
-            begin_document(fp)
-
-            fp.write(r"\textbf{Trader Joe's}")
-            fp.write(r"\newline")
-
-            group_by_store = (
-                inventory[inventory["store"] == "trader joe's"][
-                    inner_cols + ["department"]
+            # Order department by store
+            if store == "market basket":
+                group_names = [
+                    "service",
+                    "dairy & eggs",
+                    "meat",
+                    "condiments",
+                    "baking",
+                    "pasta",
+                    "pharmacy",
+                    "paper",
+                    "wraps",
+                    "cleaning",
+                    "water",
+                    "freezer",
+                    "fruits & vegetables",
                 ]
-                .drop_duplicates()
-                .sort_values("item")
-                .groupby("department")
-            )
-            group_names = [
-                "fruits & vegetables",
-                "cheese & crackers",
-                "coffee & tea",
-                "dairy & eggs",
-                "nuts & dried fruit",
-                "staples",
-                "bread",
-                "pharmacy",
-                "chocolate, cookies & crackers",
-            ]
-            n_inner_rows = 11
+                n_inner_rows = 17
+            elif store == "trader joe's":
+                group_names = [
+                    "fruits & vegetables",
+                    "cheese & crackers",
+                    "coffee & tea",
+                    "dairy & eggs",
+                    "nuts & dried fruit",
+                    "staples",
+                    "bread",
+                    "pharmacy",
+                    "chocolate, cookies & crackers",
+                ]
+                n_inner_rows = 11
+
+            else:
+                group_names = [name for name, group in group_by_store]
+                n_inner_rows = 15
+
             write_group_by(
                 fp, group_by_store, group_names, n_inner_rows, write_rule=True
             )
-
             end_document(fp)
-
-        run(["pdflatex", tex_filename])
+        run(["pdflatex", tex_filename], cwd="../documents")
 
 
 if __name__ == "__main__":
