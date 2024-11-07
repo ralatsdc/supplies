@@ -182,8 +182,10 @@ d,bag,whole wheat flour,tall cabinet,1,market basket,baking
 1,pkg,15 g blue bags,trash cabinet,1,market basket,service
 1,pkg,33 g blue bags,basement shelves,6,market basket,service
 1,pkg,33 g blue bags,trash cabinet,1,market basket,service
-1,btl,almond extract,basement shelves,4,market basket,staples
-1,btl,almond extract,cooking cabinet,4,market basket,staples
+1,btl,almond extract,basement shelves,4,market basket,baking
+1,btl,almond extract,cooking cabinet,4,market basket,baking
+2,btl,marinara,basement shelves,3,market basket,pasta
+2,btl,marinara,basement stair landing,5,market basket,pasta
 6,jug,distilled water,basement shelves,7,market basket,water
 1,jug,distilled water,bathroom cabinet,1,market basket,water
 2,8p,flavored seltzer,basement shelves,5,market basket,water
@@ -337,6 +339,8 @@ d,bag,whole wheat flour,tall cabinet,1,market basket,baking
 1,btl,rice vinegar,cooking cabinet,4,trader joe's,staples
 4,can,sardines,basement shelves,3,trader joe's,staples
 4,can,sardines,basement stair landing,6,trader joe's,staples
+4,can,salmon,basement shelves,3,trader joe's,staples
+4,can,salmon,basement stair landing,6,trader joe's,staples
 1,btl,spanish evoo,basement shelves,3,trader joe's,staples
 1,btl,spanish evoo,basement stair landing,6,trader joe's,staples
 1,btl,spanish evoo,cooking cabinet,4,trader joe's,staples
@@ -366,8 +370,6 @@ d,bag,whole wheat flour,tall cabinet,1,market basket,baking
 8,oz,parmesan,fridge,6,whole foods,cheese & crackers
 1,ctn,almond milk,basement shelves,2,whole foods,staples
 1,ctn,almond milk,fridge,12,whole foods,staples
-2,btl,marinara,basement shelves,3,market basket,staples
-2,btl,marinara,basement stair landing,5,market basket,staples
 1,btl,mayonnaise,basement stair landing,6,whole foods,staples
 1,btl,mayonnaise,fridge,8,whole foods,staples
 1,ctn,walnut milk,basement shelves,2,whole foods,staples
