@@ -245,7 +245,7 @@ def main():
     parser.add_argument(
         "-i",
         "--inventory-filename",
-        default="../resources/inventory-2024-11-07.csv",
+        default="../resources/inventory-2024-11-27.csv",
         help="the inventory filename",
     )
     args = parser.parse_args()
@@ -304,8 +304,8 @@ def main():
                     "dairy & eggs",
                     "meat",
                     "condiments",
-                    "baking",
                     "pasta",
+                    "baking",
                     "pharmacy",
                     "paper",
                     "wraps",
