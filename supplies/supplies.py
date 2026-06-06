@@ -173,7 +173,6 @@ def write_group_by(fp, group_by_label, group_names, n_inner_rows, write_rule=Fal
 
         # Write the group until it is consumed
         while group.shape[0] > 0:
-
             # Write group items
             if name == current_group_name:
                 # Write group name when first encountered
@@ -198,7 +197,6 @@ def write_group_by(fp, group_by_label, group_names, n_inner_rows, write_rule=Fal
                     fp.write("    &\n")
 
             else:
-
                 # Count rows and check
                 n_outer_row += 1
                 if n_outer_row < n_outer_rows:
@@ -211,7 +209,6 @@ def write_group_by(fp, group_by_label, group_names, n_inner_rows, write_rule=Fal
 
             # Check number of rows and columns
             if n_outer_row == n_outer_rows and n_outer_col == n_outer_cols:
-
                 # End tabular environment since the specified number
                 # of rows and columns have been written
                 fp.write(r"  \end{tabular}" + "\n")
@@ -229,7 +226,6 @@ def write_group_by(fp, group_by_label, group_names, n_inner_rows, write_rule=Fal
                     )
 
             elif group.shape[0] == 0 and name == group_names[-1]:
-
                 # End tabular environment since no more items need to
                 # be written
                 fp.write(r"  \end{tabular}" + "\n")
@@ -245,7 +241,7 @@ def main():
     parser.add_argument(
         "-i",
         "--inventory-filename",
-        default="../resources/inventory-2024-11-27.csv",
+        default="../resources/inventory-2026-06-06.csv",
         help="the inventory filename",
     )
     args = parser.parse_args()
@@ -274,6 +270,7 @@ def main():
             "basement shelves",
             "freezer",
             "laundry",
+            "laundry cabinet",
             "bathroom cabinet",
         ]
         n_inner_rows = int(group_by_location.size().median())
@@ -305,13 +302,13 @@ def main():
                     "meat",
                     "condiments",
                     "pasta",
+                    "international",
                     "baking",
                     "pharmacy",
                     "paper",
                     "wraps",
                     "cleaning",
                     "water",
-                    "freezer",
                     "fruits & vegetables",
                 ]
                 n_inner_rows = 17
@@ -320,12 +317,26 @@ def main():
                     "fruits & vegetables",
                     "cheese & crackers",
                     "coffee & tea",
-                    "dairy & eggs",
                     "nuts & dried fruit",
+                    "dairy & eggs",
                     "staples",
                     "bread",
+                    "frozen foods",
                     "pharmacy",
                     "chocolate, cookies & crackers",
+                ]
+                n_inner_rows = 11
+
+            elif store == "whole foods":
+                group_names = [
+                    "fruits & vegetables",
+                    "coffee",
+                    "dairy & eggs",
+                    "condiments",
+                    "baking",
+                    "cereal",
+                    "cheese & crackers",
+                    "frozen foods",
                 ]
                 n_inner_rows = 11
 
