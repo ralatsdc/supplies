@@ -241,7 +241,7 @@ def main():
     parser.add_argument(
         "-i",
         "--inventory-filename",
-        default="../resources/inventory-2026-06-06.csv",
+        default="../resources/inventory-2026-06-15.csv",
         help="the inventory filename",
     )
     args = parser.parse_args()
